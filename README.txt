@@ -10,6 +10,8 @@ POKEDEX API (NestJS, MongoDB and Docker)
         $ yarn start:dev                    // Ejecutar la app (watch mode)
     
     - Agregar dependencias
+        + Server Static (archivos estaticos)
+            $ yarn add @nestjs/serve-static
     
     - Eliminar dependencias
         + Prettier
