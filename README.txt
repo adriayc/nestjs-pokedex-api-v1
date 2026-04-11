@@ -18,12 +18,34 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ yarn remove prettier  (optional!)
         + ESlint-Config-Prettier y ESlint-plugin-Prettier (optional!)
             $ yarn remove eslint-config-prettier eslint-plugin-prettier
+
+    - Nest CLI
+        + Crear un resource (recurso completo sin archivos de test)
+            $ nest g res pokemon --no-spec
+                > ? What transport layer do you use? REST API
+                > ? Would you like to generate CRUD entry points? (Y/n) y
     
     - Postman
         + Create Workspace (Click "Create Workspace" > Blank workspace | Click "Next" > Name: Ax2CDev | Click "Create")
         + Create Collection (Click "+ | Create new collection" > Blank collection > Name: pokedex-api)
         + HTTP requests
-            > GET:                       Click "Send"
+            * Static Content (Front-End)
+                > GET: http://localhost:30000/                              Click "Send"
+            * Pokemon (Click '...' > Add folder > Name: "Pokemon")
+                - Create Pokemon
+                    > POST: http://localhost:30000/api/v2/pokemon                           Click "Send"
+                        > Body > Row | JSON
+                            { }
+                - Find All Pokemon
+                    > GET: http://localhost:30000/api/v2/pokemon                            Click "Send"
+                - Find One Pokemon
+                    > GET: http://localhost:30000/api/v2/pokemon/1                          Click "Send"
+                - Update Pokemon
+                    > PATCH: http://localhost:30000/api/v2/pokemon/1                        Click "Send"
+                        > Body > Row | JSON
+                            { }
+                - Delete Pokemon
+                    > DELETE: http://localhost:30000/api/v2/pokemon/1                       Click "Send"
 
 * VSCODE
     - Shortcuts
