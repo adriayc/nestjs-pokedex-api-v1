@@ -17,6 +17,8 @@ POKEDEX API (NestJS, MongoDB and Docker)
     - Agregar dependencias
         + Server Static (archivos estaticos)
             $ yarn add @nestjs/serve-static
+        + Mongo
+            $ yarn add @nestjs/mongoose mongoose
     
     - Eliminar dependencias
         + Prettier
