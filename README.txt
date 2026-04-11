@@ -61,7 +61,7 @@ POKEDEX API (NestJS, MongoDB and Docker)
                 - Find All Pokemon
                     > GET: http://localhost:30000/api/v2/pokemon                            Click "Send"
                 - Find One Pokemon
-                    > GET: http://localhost:30000/api/v2/pokemon/1                          Click "Send"
+                    > GET: http://localhost:30000/api/v2/pokemon/{{term - ID|no|name}}      Click "Send"
                 - Update Pokemon
                     > PATCH: http://localhost:30000/api/v2/pokemon/1                        Click "Send"
                         > Body > Row | JSON
