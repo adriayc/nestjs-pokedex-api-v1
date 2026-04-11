@@ -19,6 +19,8 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ yarn add @nestjs/serve-static
         + Mongo
             $ yarn add @nestjs/mongoose mongoose
+        + Class-Validator y Class-transformer (Validación)
+            $ yarn add class-validator class-transformer
     
     - Eliminar dependencias
         + Prettier
@@ -52,7 +54,10 @@ POKEDEX API (NestJS, MongoDB and Docker)
                 - Create Pokemon
                     > POST: http://localhost:30000/api/v2/pokemon                           Click "Send"
                         > Body > Row | JSON
-                            { }
+                            {
+                                "no": 1,
+                                "name": "Bulbasaur"
+                            }
                 - Find All Pokemon
                     > GET: http://localhost:30000/api/v2/pokemon                            Click "Send"
                 - Find One Pokemon
