@@ -63,9 +63,11 @@ POKEDEX API (NestJS, MongoDB and Docker)
                 - Find One Pokemon
                     > GET: http://localhost:30000/api/v2/pokemon/{{term - ID|no|name}}      Click "Send"
                 - Update Pokemon
-                    > PATCH: http://localhost:30000/api/v2/pokemon/1                        Click "Send"
+                    > PATCH: http://localhost:30000/api/v2/pokemon/{{term - ID|no|name}}    Click "Send"
                         > Body > Row | JSON
-                            { }
+                            {
+                                "name": "Bulbasaur update"
+                            }
                 - Delete Pokemon
                     > DELETE: http://localhost:30000/api/v2/pokemon/1                       Click "Send"
 
