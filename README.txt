@@ -37,6 +37,10 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ nest g mo common
         + Crear un pipe (sin archivos de test y no genera una carpeta)
             $ nest g pi common/pipes/parseMongoId --no-spec --flat
+        + Crear un resource (SEED - Populate DB sin archivos de test)
+            $ nest g res seed --no-spec
+                > ? What transport layer do you use? REST API
+                > ? Would you like to generate CRUD entry points? (Y/n) y
 
     - Docker
         + Run docker compose
@@ -74,6 +78,11 @@ POKEDEX API (NestJS, MongoDB and Docker)
                             }
                 - Delete Pokemon
                     > DELETE: http://localhost:30000/api/v2/pokemon/{{id}}                  Click "Send"
+            * SEED (Click '...' > Add folder > Name: "SEED")
+                - Populate DB
+                    > POST: http://localhost:30000/api/v2/seed                              Click "Send"
+                        > Body > Row | JSON
+                            { }
 
 * VSCODE
     - Shortcuts
