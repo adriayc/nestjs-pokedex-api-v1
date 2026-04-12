@@ -33,6 +33,10 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ nest g res pokemon --no-spec
                 > ? What transport layer do you use? REST API
                 > ? Would you like to generate CRUD entry points? (Y/n) y
+        + Crear un module
+            $ nest g mo common
+        + Crear un pipe (sin archivos de test y no genera una carpeta)
+            $ nest g pi common/pipes/parseMongoId --no-spec --flat
 
     - Docker
         + Run docker compose
@@ -69,7 +73,7 @@ POKEDEX API (NestJS, MongoDB and Docker)
                                 "name": "Bulbasaur update"
                             }
                 - Delete Pokemon
-                    > DELETE: http://localhost:30000/api/v2/pokemon/{{term - ID|no|name}}   Click "Send"
+                    > DELETE: http://localhost:30000/api/v2/pokemon/{{id}}                  Click "Send"
 
 * VSCODE
     - Shortcuts
