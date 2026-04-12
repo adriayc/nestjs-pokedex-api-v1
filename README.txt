@@ -21,6 +21,8 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ yarn add @nestjs/mongoose mongoose
         + Class-Validator y Class-transformer (Validación)
             $ yarn add class-validator class-transformer
+        + Axios
+            $ yarn add axios
     
     - Eliminar dependencias
         + Prettier
@@ -87,3 +89,7 @@ POKEDEX API (NestJS, MongoDB and Docker)
 * VSCODE
     - Shortcuts
         + Recargar la ventana (CTRL + SHIFT + P > Search: ..."Developer: Reload Window")
+        + Convertir JSON as Code
+            > Copiar el "response" de Postman | Bruno | Apidog
+            > Crear un archivo (Ej: interface)
+            > CTRL + SHIFT + P > Search: ..."Paste JSON as Code" > Top Level Name: PokeResponse
