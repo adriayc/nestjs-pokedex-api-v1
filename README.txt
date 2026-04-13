@@ -81,7 +81,7 @@ POKEDEX API (NestJS, MongoDB and Docker)
                 - Delete Pokemon
                     > DELETE: http://localhost:30000/api/v2/pokemon/{{id}}                  Click "Send"
             * SEED (Click '...' > Add folder > Name: "SEED")
-                - Populate DB
+                - Populate DB (Solo DEV)
                     > POST: http://localhost:30000/api/v2/seed                              Click "Send"
                         > Body > Row | JSON
                             { }

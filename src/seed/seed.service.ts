@@ -15,17 +15,33 @@ export class SeedService {
   ) {}
 
   async executeSeed() {
+    await this.pokemonModel.deleteMany({}); // Delete all pokemon
+
     const { data } = await axios.get<PokeResponse>(
-      'https://pokeapi.co/api/v2/pokemon?limit=10',
+      'https://pokeapi.co/api/v2/pokemon?limit=105',
     );
+    // Option #2
+    // const insertPromisesArray: Promise<Pokemon>[] = [];
+    // Option #3
+    const pokemonToInsert: { name: string; no: number }[] = [];
+
     // Format the data
-    // eslint-disable-next-line @typescript-eslint/no-misused-promises
-    data.results.forEach(async ({ name, url }) => {
+    data.results.forEach(({ name, url }) => {
       const segments = url.split('/');
       const no = +segments[segments.length - 2];
 
-      await this.pokemonModel.create({ name, no });
+      // Option #1
+      // await this.pokemonModel.create({ name, no });
+      // Option #2
+      // insertPromisesArray.push(this.pokemonModel.create({ name, no }));
+      // Option #3
+      pokemonToInsert.push({ name, no });
     });
+
+    // Option #2
+    // await Promise.all(insertPromisesArray);
+    // Option #3
+    await this.pokemonModel.insertMany(pokemonToInsert);
 
     return 'Seed executed!';
   }
