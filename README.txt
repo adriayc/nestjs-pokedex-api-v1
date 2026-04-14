@@ -23,7 +23,9 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ yarn add class-validator class-transformer
         + Axios
             $ yarn add axios
-    
+        + Dotenv (Environment variable config)
+            $ yarn add @nestjs/config
+
     - Eliminar dependencias
         + Prettier
             $ yarn remove prettier  (optional!)
