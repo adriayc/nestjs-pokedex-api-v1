@@ -106,3 +106,11 @@ POKEDEX API (NestJS, MongoDB and Docker)
     - Connect with MongoDB Compass (DATABASE | Clusters > Click 'Connect' > Compass | Copy the connection string)
     - Connect with App NestJS (DATABASE | Clusters > Click 'Connect' > Compass | Copy the connection string)
     - Show the collection (DATABASE | Clusters > Click 'Browser Collection')
+
+* Deployment to Render
+    - Sign up / sign in
+    - Create a new Web Service (Dashboard | Click 'Web Services')
+        + Connect with GitHub
+        + Select repository
+        + Add environment variables (Add Environment Variable or Add from .env)
+            * Remove the port (Render provides the port)
