@@ -21,7 +21,10 @@ import { JoiValidationSchema } from './config/joi.validation';
       rootPath: join(__dirname, '..', 'public'),
     }),
     // Mongo
-    MongooseModule.forRoot(process.env.MONGODB!), // Error, type undefined is not assignable to type string
+    // MongooseModule.forRoot(process.env.MONGODB!), // Error, type undefined is not assignable to type string
+    MongooseModule.forRoot(process.env.MONGODB!, {
+      dbName: 'nest-pokedex',
+    }), // Error, type undefined is not assignable to type string
     // Modules
     PokemonModule,
     CommonModule,

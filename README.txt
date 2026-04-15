@@ -98,3 +98,11 @@ POKEDEX API (NestJS, MongoDB and Docker)
             > Copiar el "response" de Postman | Bruno | Apidog
             > Crear un archivo (Ej: interface)
             > CTRL + SHIFT + P > Search: ..."Paste JSON as Code" > Top Level Name: PokeResponse
+
+* MongoDB Atlas
+    - Sign Up / Sign in
+    - Create a cluster (DATABASE | Clusters > Click '+ Create')
+    - Create username and password (SECURITY | Security Quickstart) [Recommended!!!]
+    - Connect with MongoDB Compass (DATABASE | Clusters > Click 'Connect' > Compass | Copy the connection string)
+    - Connect with App NestJS (DATABASE | Clusters > Click 'Connect' > Compass | Copy the connection string)
+    - Show the collection (DATABASE | Clusters > Click 'Browser Collection')
