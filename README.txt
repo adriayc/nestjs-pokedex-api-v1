@@ -25,6 +25,8 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ yarn add axios
         + Dotenv (Environment variable config)
             $ yarn add @nestjs/config
+        + Joi (Validación de Schema)
+            $ yarn add joi
 
     - Eliminar dependencias
         + Prettier

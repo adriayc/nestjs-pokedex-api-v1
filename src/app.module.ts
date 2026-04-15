@@ -7,12 +7,14 @@ import { PokemonModule } from './pokemon/pokemon.module';
 import { CommonModule } from './common/common.module';
 import { SeedModule } from './seed/seed.module';
 import { EnvConfiguration } from './config/env.config';
+import { JoiValidationSchema } from './config/joi.validation';
 
 @Module({
   imports: [
     // Dotenv config
     ConfigModule.forRoot({
       load: [EnvConfiguration],
+      validationSchema: JoiValidationSchema,
     }),
     // Contenido estático (Font-End)
     ServeStaticModule.forRoot({
