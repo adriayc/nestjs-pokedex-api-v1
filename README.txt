@@ -120,3 +120,13 @@ POKEDEX API (NestJS, MongoDB and Docker)
     - Delete the app container (Docker Desktop)
     - Create Dockerfile
     - Create docker-compose.prod.yaml
+    - Create .env.prod
+    - Docker compose commands
+        + Build
+            $ docker compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+            $ docker compose -f docker-compose.prod.yaml up --build                         // By default, it uses the .env file
+        + Run
+            $ docker compose -f docker-compose.prod.yaml --env-file .env.prod up
+            $ docker compose -f docker-compose.prod.yaml up                                 // By default, it uses the .env file
+            $ docker compose -f docker-compose.prod.yaml up -d                              // By default, it uses the .env file
+    - Use Docker Desktop to view the images and containers
