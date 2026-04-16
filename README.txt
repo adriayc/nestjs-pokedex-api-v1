@@ -130,3 +130,6 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ docker compose -f docker-compose.prod.yaml up                                 // By default, it uses the .env file
             $ docker compose -f docker-compose.prod.yaml up -d                              // By default, it uses the .env file
     - Use Docker Desktop to view the images and containers
+    - Enable MongoDB data volume y Run Docker Compose
+        $ docker compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+    - Open the container at the TERMINAL (Docker Desktop > {{CONTAINER_NAME}} > Click "Show container action" > Open in terminal)
