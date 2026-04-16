@@ -114,3 +114,5 @@ POKEDEX API (NestJS, MongoDB and Docker)
         + Select repository
         + Add environment variables (Add Environment Variable or Add from .env)
             * Remove the port (Render provides the port)
+
+* Dockerize the app
