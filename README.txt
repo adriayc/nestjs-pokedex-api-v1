@@ -119,3 +119,4 @@ POKEDEX API (NestJS, MongoDB and Docker)
     - Cancel the app's execution
     - Delete the app container (Docker Desktop)
     - Create Dockerfile
+    - Create docker-compose.prod.yaml
