@@ -116,3 +116,6 @@ POKEDEX API (NestJS, MongoDB and Docker)
             * Remove the port (Render provides the port)
 
 * Dockerize the app
+    - Cancel the app's execution
+    - Delete the app container (Docker Desktop)
+    - Create Dockerfile
