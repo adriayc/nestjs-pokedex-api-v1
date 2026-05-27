@@ -23,7 +23,11 @@ POKEDEX API (NestJS, MongoDB and Docker)
             $ yarn add class-validator class-transformer
         + Axios
             $ yarn add axios
-    
+        + Dotenv (Environment variable config)
+            $ yarn add @nestjs/config
+        + Joi (Validación de Schema)
+            $ yarn add joi
+
     - Eliminar dependencias
         + Prettier
             $ yarn remove prettier  (optional!)
@@ -94,3 +98,38 @@ POKEDEX API (NestJS, MongoDB and Docker)
             > Copiar el "response" de Postman | Bruno | Apidog
             > Crear un archivo (Ej: interface)
             > CTRL + SHIFT + P > Search: ..."Paste JSON as Code" > Top Level Name: PokeResponse
+
+* MongoDB Atlas
+    - Sign Up / Sign in
+    - Create a cluster (DATABASE | Clusters > Click '+ Create')
+    - Create username and password (SECURITY | Security Quickstart) [Recommended!!!]
+    - Connect with MongoDB Compass (DATABASE | Clusters > Click 'Connect' > Compass | Copy the connection string)
+    - Connect with App NestJS (DATABASE | Clusters > Click 'Connect' > Compass | Copy the connection string)
+    - Show the collection (DATABASE | Clusters > Click 'Browser Collection')
+
+* Deployment to Render
+    - Sign up / sign in
+    - Create a new Web Service (Dashboard | Click 'Web Services')
+        + Connect with GitHub
+        + Select repository
+        + Add environment variables (Add Environment Variable or Add from .env)
+            * Remove the port (Render provides the port)
+
+* Dockerize the app
+    - Cancel the app's execution
+    - Delete the app container (Docker Desktop)
+    - Create Dockerfile
+    - Create docker-compose.prod.yaml
+    - Create .env.prod
+    - Docker compose commands
+        + Build
+            $ docker compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+            $ docker compose -f docker-compose.prod.yaml up --build                         // By default, it uses the .env file
+        + Run
+            $ docker compose -f docker-compose.prod.yaml --env-file .env.prod up
+            $ docker compose -f docker-compose.prod.yaml up                                 // By default, it uses the .env file
+            $ docker compose -f docker-compose.prod.yaml up -d                              // By default, it uses the .env file
+    - Use Docker Desktop to view the images and containers
+    - Enable MongoDB data volume y Run Docker Compose
+        $ docker compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+    - Open the container at the TERMINAL (Docker Desktop > {{CONTAINER_NAME}} > Click "Show container action" > Open in terminal)
